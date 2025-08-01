@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide Masters | Digital Wisdom Hub</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #7c4dff;
+        --secondary-color: #00d1ff;
+        --bg-gradient: linear-gradient(135deg, #1b1d2b 0%, #0d0d14 100%);
+        --text-light: #f3f4f6;
+        --text-muted: #a1a1aa;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --border-radius: 0.75rem;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--bg-gradient);
+        color: var(--text-light);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--primary-color);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Header */
+      header {
+        width: 100%;
+        padding: 1.25rem 0;
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: 'Cinzel', serif;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo span {
+        font-size: 1.75rem;
+      }
+
+      nav {
+        display: flex;
+        gap: 1.5rem;
+        font-weight: 500;
+      }
+
+      nav .btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius);
+      }
+
+      /* Hero */
+      #hero {
+        padding: 6rem 0 4rem;
+        background: url('https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+        position: relative;
+        isolation: isolate;
+      }
+
+      #hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(3px);
+        z-index: -1;
+      }
+
+      .hero-content {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .hero-content h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: var(--text-muted);
+      }
+
+      .btn-primary {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        box-shadow: 0 0 15px rgba(124, 77, 255, 0.4);
+        transition: background 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--secondary-color);
+      }
+
+      /* E‑Books Section */
+      #ebooks {
+        padding: 4rem 0 3rem;
+      }
+
+      #ebooks h3 {
+        font-family: 'Cinzel', serif;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--border-radius);
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card h4 {
+        font-family: 'Cinzel', serif;
+        margin-bottom: 0.75rem;
+      }
+
+      .card p {
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+        flex-grow: 1;
+      }
+
+      .card .btn {
+        align-self: flex-start;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--primary-color);
+        border-radius: var(--border-radius);
+      }
+
+      .card .btn:hover {
+        background: var(--primary-color);
+        color: #fff;
+      }
+
+      /* Footer */
+      footer {
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      footer .social {
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1.25rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <div class="logo"><span>🧙‍♂️</span>Guide Masters</div>
+        <nav>
+          <a href="#optimize">Optimize</a>
+          <a href="#code">Code</a>
+          <a href="#evolve">Evolve</a>
+          <a href="#ebooks" class="btn">E‑Books</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container hero-content">
+        <h2>Unlock Your Path to Mastery</h2>
+        <p>Digital wisdom for self‑optimization, coding excellence, and holistic evolution — guided by modern‑day shamans of the web.</p>
+        <a href="#ebooks" class="btn-primary">Browse E‑Books</a>
+      </div>
+    </section>
+
+    <!-- E‑Books -->
+    <section id="ebooks">
+      <div class="container">
+        <h3>Featured E‑Books</h3>
+        <div class="cards">
+          <div class="card">
+            <h4>Quantum Karma</h4>
+            <p>Harness karmic flow to align your actions with universal resonance and accelerate personal growth.</p>
+            <a href="https://www.amazon.com/dp/XXXXXXXX1" target="_blank" rel="noopener" class="btn">Amazon</a>
+          </div>
+          <div class="card">
+            <h4>Code Alchemy</h4>
+            <p>Transform your coding practice into an art of mindful creation — from basic syntax to scalable systems.</p>
+            <a href="https://www.amazon.com/dp/XXXXXXXX2" target="_blank" rel="noopener" class="btn">Amazon</a>
+          </div>
+          <div class="card">
+            <h4>Evolutionary Playbook</h4>
+            <p>Step‑by‑step rituals for mental clarity, emotional resilience, and spiritual elevation in an ever‑changing world.</p>
+            <a href="https://www.amazon.com/dp/XXXXXXXX3" target="_blank" rel="noopener" class="btn">Amazon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Guide Masters. All rights reserved.</p>
+        <div class="social">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
